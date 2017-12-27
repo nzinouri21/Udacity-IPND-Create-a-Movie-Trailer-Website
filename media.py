@@ -1,9 +1,11 @@
 import webbrowser
-#Things we want the class movie to remember:
-#   1.Title
-#   2.Storyline
-#   3.Poster image
-#   4.YouTube trailer
+
+#Because we only have movies here, creating parent class Video might not be that useful.
+#However, I wanted to implement the idea of inheritence.
+#It also makes the code flexible if later on I decide to add tv shows or Netflix
+#movies to my trailer website.
+
+
 class Video():
     def __init__(self, title):
         self.title = title
@@ -24,12 +26,3 @@ class Movie(Video):
 
     def show_trailer(self):
         webbrowser.open(self.trailer_youtube_url)
-
-class TvShow(Video):
-    def __init__(self, title, season, episode, tv_station):
-        Video.__init__(self, title, duration)
-        self .season = season
-        self.episode = episode
-        self.tv_station = tv_station
-
-    def get_local_listing(self):
