@@ -1,9 +1,13 @@
+#In this file, we store details of movies to display them on a website.
+
 import media
 import fresh_tomatoes
 
 
 #It is good practice to call your class definition in one file
 #and to call/use your class in a different file.
+#This file is to use clasa Movie from file media and to create multiple
+#instances of Movie
 
 toy_story = media.Movie("Toy Story",
                         "Joss Whedon, Joel Cohen, Andrew Stanton, and Alec Sokolow",
@@ -12,7 +16,7 @@ toy_story = media.Movie("Toy Story",
                         "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
                         "https://www.youtube.com/watch?v=KYz2wyBy3kc")
 
-#print (toy_story.storyline)
+
 
 avatar = media.Movie("Avatar",
                         "James Cameron",
@@ -21,9 +25,7 @@ avatar = media.Movie("Avatar",
                         "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg",
                         "https://www.youtube.com/watch?v=5PSNL1qE6VY")
 
-#print (avatar.storyline)
 
-#avatar.show_trailer()
 
 inception = media.Movie("Inception",
                         "Christopher Nolan",
@@ -32,7 +34,7 @@ inception = media.Movie("Inception",
                         "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
                         "https://www.youtube.com/watch?v=66TuSJo4dZM")
 
-#inception.show_trailer()
+
 
 ratatouille = media.Movie("Ratatouille",
                         "Brad Bird, Kathy Greenberg, Bob Peterson, and Emily Cook",
@@ -60,10 +62,4 @@ how_to_be_signle = media.Movie("How to be single",
 #Create a list or array of movies to pass to fresh_tomatoes open_movies_page function
 movies = [toy_story, avatar, inception, ratatouille, the_big_sick, how_to_be_signle]
 
-#fresh_tomatoes.open_movies_page(movies)
-
-#print media.Movie.VALID_RATINGS
-#print media.Movie.__doc__
-#print media.Movie.__name__
-#print media.Movie.__module__
-#print how_to_be_signle.screenwriter
+fresh_tomatoes.open_movies_page(movies)
